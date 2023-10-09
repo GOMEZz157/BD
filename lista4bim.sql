@@ -69,3 +69,5 @@ RETURNS NUMERIC
 BEGIN
     RETURN preco * quantidade;
 END;
+
+SELECT produto, TOTAL_VALOR(preco, quantidade) AS valor_total FROM produtos;
