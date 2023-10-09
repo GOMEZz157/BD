@@ -79,3 +79,15 @@ SELECT MAX(preco) AS produto_mais_caro FROM produtos;
 SELECT MIN(preco) AS produto_mais_barato FROM produtos;
 
 SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS soma_total_estoque FROM produtos;
+
+CREATE FUNCTION FATORIAL(n INT)
+RETURNS INT
+BEGIN
+    DECLARE result INT DEFAULT 1;
+    DECLARE i INT DEFAULT 1;
+    WHILE i <= n DO
+        SET result = result * i;
+        SET i = i + 1;
+    END WHILE;
+    RETURN result;
+END;
