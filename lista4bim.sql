@@ -51,3 +51,7 @@ INSERT INTO eventos (data_evento) VALUES (NOW());
 SELECT DATEDIFF('2023-10-10', '2023-10-01') AS dias_entre_datas FROM eventos;
 
 SELECT data_evento, DAYNAME(data_evento) AS nome_dia_semana FROM eventos;
+
+SELECT produto, 
+       IF(quantidade > 0, 'Em estoque', 'Fora de estoque') AS status_estoque
+FROM produtos;
