@@ -55,3 +55,11 @@ SELECT data_evento, DAYNAME(data_evento) AS nome_dia_semana FROM eventos;
 SELECT produto, 
        IF(quantidade > 0, 'Em estoque', 'Fora de estoque') AS status_estoque
 FROM produtos;
+
+SELECT produto, 
+       CASE 
+           WHEN preco < 10 THEN 'Barato'
+           WHEN preco >= 10 AND preco <= 20 THEN 'Médio'
+           WHEN preco > 20 THEN 'Caro'
+       END AS categoria_preco
+FROM produtos;
