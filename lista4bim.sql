@@ -63,3 +63,9 @@ SELECT produto,
            WHEN preco > 20 THEN 'Caro'
        END AS categoria_preco
 FROM produtos;
+
+CREATE FUNCTION TOTAL_VALOR(preco NUMERIC, quantidade INT)
+RETURNS NUMERIC
+BEGIN
+    RETURN preco * quantidade;
+END;
