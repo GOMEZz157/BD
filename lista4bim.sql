@@ -11,3 +11,10 @@ INSERT INTO nomes (nome) VALUES
 SELECT UPPER(nome) FROM nomes;
 
 SELECT nome, LENGTH(nome) FROM nomes;
+
+SELECT 
+    CASE 
+        WHEN nome LIKE '%Maria%' THEN 'Sra. ' || nome
+        ELSE 'Sr. ' || nome
+    END AS nome_com_tratamento
+FROM nomes;
