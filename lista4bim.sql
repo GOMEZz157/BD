@@ -77,3 +77,5 @@ SELECT COUNT(*) AS total_produtos FROM produtos;
 SELECT MAX(preco) AS produto_mais_caro FROM produtos;
 
 SELECT MIN(preco) AS produto_mais_barato FROM produtos;
+
+SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS soma_total_estoque FROM produtos;
