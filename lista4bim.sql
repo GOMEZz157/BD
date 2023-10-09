@@ -93,3 +93,17 @@ BEGIN
 END;
 
 SELECT POWER(2, 3) AS exponencial;
+
+CREATE FUNCTION PALINDROMO(palavra VARCHAR(255))
+RETURNS INT
+BEGIN
+    DECLARE palavra_reversa VARCHAR(255);
+    SET palavra_reversa = REVERSE(palavra);
+    IF palavra = palavra_reversa THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+    END IF;
+END;
+
+SELECT PALINDROMO('radar') AS e_palindromo;
