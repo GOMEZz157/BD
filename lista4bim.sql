@@ -75,3 +75,5 @@ SELECT produto, TOTAL_VALOR(preco, quantidade) AS valor_total FROM produtos;
 SELECT COUNT(*) AS total_produtos FROM produtos;
 
 SELECT MAX(preco) AS produto_mais_caro FROM produtos;
+
+SELECT MIN(preco) AS produto_mais_barato FROM produtos;
