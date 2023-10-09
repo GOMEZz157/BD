@@ -91,3 +91,5 @@ BEGIN
     END WHILE;
     RETURN result;
 END;
+
+SELECT POWER(2, 3) AS exponencial;
