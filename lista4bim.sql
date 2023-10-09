@@ -18,3 +18,9 @@ SELECT
         ELSE 'Sr. ' || nome
     END AS nome_com_tratamento
 FROM nomes;
+
+CREATE TABLE produtos (
+    produto VARCHAR(50),
+    preco NUMERIC(10, 2),
+    quantidade INT
+);
